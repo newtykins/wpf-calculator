@@ -16,14 +16,17 @@
         Background="Transparent"
         AllowsTransparency="True"
 >
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="35" />
+    </WindowChrome.WindowChrome>
+    
     <Border Background="#272537" CornerRadius="20">
         <Grid>
-            <StackPanel>
-                <materialDesign:PackIcon Kind="Close" Foreground="White" Height="31" Width="31" Margin="749,20,0,0" MouseLeftButtonDown="Close" Cursor="Hand" />
-            </StackPanel>
-            
-            <Grid Margin="0,50,0,0">
-                <Button Content="Click Me!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16 130" Height="35" Width="85" Click="Increment" />
+            <Label Content="calculator" Foreground="White" FontSize="20" FontWeight="Normal" Margin="14,15,684,400" />
+            <materialDesign:PackIcon WindowChrome.IsHitTestVisibleInChrome="True" Kind="Close" Foreground="White" Height="30" Width="30" Margin="751,15,0,0" MouseLeftButtonDown="CloseWindow" Cursor="Hand" RenderTransformOrigin="0.4,0.633" />
+
+             <Grid Margin="0,50,0,0">
+                <Button Content="Increment the Counter!" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="16,130,0,0" Height="35" Width="188" Click="Increment" />
                 <StackPanel>
                     <materialDesign:Card Padding="32" Margin="16">
                         <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}" TextAlignment="Right" Name="resultText">0</TextBlock>

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 
 namespace calculator
 {
@@ -11,9 +12,9 @@ namespace calculator
             InitializeComponent();
         }
 
-        private void Close(object sender, RoutedEventArgs e)
+        private void CloseWindow(object sender, RoutedEventArgs e)
         {
-            System.Windows.Application.Current.Shutdown();
+            Close();
         }
 
         private void Increment(object sender, RoutedEventArgs e)
